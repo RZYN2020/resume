@@ -1,0 +1,127 @@
+/* 页面设置 */
+@page {
+  size: A4;
+  margin: 0; /* 去除默认的页面边距 */
+}
+
+/* 简历容器 */
+.resume-container {
+  width: 1123px; /* A4宽度 */
+  height: 1611px; /* A4高度 */
+  margin: 0 auto; /* 水平居中 */
+  background-color: #fff; /* 背景颜色 */
+  border: 1px solid #ccc; /* 边框 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+  overflow: hidden; /* 隐藏超出部分 */
+  position: relative; /* 相对于浏览器窗口定位 */
+}
+
+/* 简历内容 */
+.resume-content {
+  width: 80%; /* 内容宽度，留出两边的空白 */
+  max-width: 1000px; /* 最大宽度 */
+  margin: 0 auto; /* 水平居中 */
+  padding: 20px; /* 内边距 */
+}
+
+/* 媒体查询，用于调整不同屏幕大小下的样式 */
+@media screen and (max-width: 1123px) {
+  .resume-container {
+    width: 100%; /* 在屏幕宽度小于A4宽度时，宽度为100% */
+    height: auto; /* 高度自适应 */
+    overflow-y: scroll; /* 允许垂直滚动 */
+  }
+}
+
+
+
+/* 基础重置 */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* 字体和颜色 */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+/* 联系信息 */
+.contact-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 教育背景 */
+.education {
+    margin-bottom: 20px;
+}
+
+/* 实习经历和项目经验 */
+.experience, .projects {
+    margin-bottom: 20px;
+}
+
+/* 标题 */
+h1, h2 {
+    color: #003366;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 20px;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+/* 列表 */
+ul {
+    list-style-type: none;
+    margin-left: 0;
+}
+
+ul li {
+    margin-bottom: 5px;
+    padding-left: 10px;
+    position: relative;
+}
+
+ul li:before {
+    content: "●";
+    position: absolute;
+    left: 0;
+    color: #003366;
+}
+
+/* 链接 */
+a {
+    color: #003366;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 其他 */
+.other {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+}
+/* 其他样式 */
+.dark-theme {
+    color: #f1f1f1;
+    background-color: #333;
+}
+.compact-theme {
+    font-size: 12px;
+}
