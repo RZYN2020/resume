@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #007bff; /* Blue for active states and links */
+            --secondary-color: #28a745; /* Green for download button */
+            --header-bg: #2c3e50; /* Darker grey/blue for header */
+            --body-bg: #f8f9fa; /* Lighter background */
+            --card-bg: #ffffff; /* White for resume container */
+            --text-color: #333;
+            --light-grey: #e9ecef;
+            --dark-grey: #6c757d;
+        }
+
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--body-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .header {
+            background-color: var(--header-bg);
+            color: white;
+            padding: 15px 30px; /* More padding */
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            gap: 15px; /* Spacing between header elements */
+        }
+
+        .language-switcher button {
+            background-color: var(--dark-grey);
+            color: white;
+            border: none;
+            padding: 10px 15px; /* Slightly larger buttons */
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 5px; /* Slightly more rounded */
+            font-size: 0.95rem;
+            transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+        }
+
+        .language-switcher button:hover {
+            background-color: #777;
+            transform: translateY(-2px); /* Subtle lift effect */
+        }
+
+        .language-switcher button.active {
+            background-color: var(--primary-color);
+            box-shadow: 0 2px 5px rgba(0, 123, 255, 0.3); /* Subtle shadow for active button */
+        }
+
+        .download-button {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            margin-left: 20px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            display: inline-flex; /* Align icon and text */
+            align-items: center;
+            gap: 8px; /* Space between icon and text */
+        }
+
+        .download-button:hover {
+            background-color: #218838;
+            transform: translateY(-2px);
+        }
+
+        .social-link-item {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            background-color: #0077b5; /* LinkedIn blue */
+            font-size: 0.95rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .social-link-item:hover {
+            background-color: #005f93;
+            transform: translateY(-2px);
+        }
+
+        .open-in-new-tab-button {
+            background-color: #6c757d; /* A subtle grey */
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .open-in-new-tab-button:hover {
+            background-color: #5a6268; /* Darker grey on hover */
+            transform: translateY(-2px);
+        }
+
+        .resume-container {
+            margin: 30px auto; /* More margin top/bottom */
+            max-width: 900px;
+            background-color: var(--card-bg);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+            border-radius: 10px; /* Slightly more rounded corners */
+            overflow: hidden;
+        }
+
+        .resume-iframe {
+            width: 100%;
+            height: 1000px;
+            border: none;
+            display: none;
+        }
+
+        .resume-iframe.active {
+            display: block;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column; /* Stack header items */
+                padding: 15px 20px;
+            }
+
+            .language-switcher, .header > div {
+                margin-bottom: 15px;
+            }
+
+            .language-switcher button,
+            .download-button,
+            .social-link-item,
+            .open-in-new-tab-button { /* Added new button to media query */
+                width: 100%; /* Full width buttons */
+                box-sizing: border-box; /* Include padding in width */
+                margin: 5px 0; /* Adjust margin for stacking */
+            }
+
+            .social-links {
+                margin-right: 0 !important; /* Remove right margin on smaller screens */
+                width: 100%;
+                display: flex;
+                flex-direction: column; /* Stack social links */
+                align-items: center;
+            }
+
+            .download-button {
+                margin-left: 0; /* Remove left margin */
+            }
+
+            .resume-container {
+                margin: 20px 15px; /* Adjust margin for smaller screens */
+                border-radius: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="language-switcher">
+            <button data-lang="zh" class="active">中文</button>
+            <button data-lang="en">English</button>
+            <button data-lang="ja">日本語</button>
+        </div>
+        <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 15px;">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/yongzhen-zhao-0173aa255" target="_blank" class="social-link-item">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+            <a href="#" class="open-in-new-tab-button" id="openNewTabButton">
+                <i class="fas fa-external-link-alt"></i> 在新标签页打开
+            </a>
+            <a href="./resume_zh.pdf" download="resume_zh.pdf" class="download-button" id="pdfDownloadButton">
+                <i class="fas fa-download"></i> 下载 PDF (中文)
+            </a>
+        </div>
+    </div>
+
+    <div class="resume-container">
+        <iframe id="resume-zh" class="resume-iframe active" src="resume_zh.html"></iframe>
+        <iframe id="resume-en" class="resume-iframe" src="resume_en.html"></iframe>
+        <iframe id="resume-ja" class="resume-iframe" src="resume_ja.html"></iframe>
+    </div>
+
+    <script>
+        const langButtons = document.querySelectorAll('.language-switcher button');
+        const resumeIframes = document.querySelectorAll('.resume-iframe');
+        const pdfDownloadButton = document.getElementById('pdfDownloadButton');
+        const openNewTabButton = document.getElementById('openNewTabButton'); // Get the new button
+
+        const downloadTexts = {
+            'zh': '下载 PDF (中文)',
+            'en': 'Download PDF (EN)',
+            'ja': 'PDFをダウンロード (日本語)'
+        };
+
+        const downloadIcons = {
+            'zh': '<i class="fas fa-download"></i> 下载 PDF (中文)',
+            'en': '<i class="fas fa-download"></i> Download PDF (EN)',
+            'ja': '<i class="fas fa-download"></i> PDFをダウンロード (日本語)'
+        };
+
+        const openNewTabTexts = { // New object for "Open in New Tab" text
+            'zh': '<i class="fas fa-external-link-alt"></i> 在新标签页打开',
+            'en': '<i class="fas fa-external-link-alt"></i> Open in New Tab',
+            'ja': '<i class="fas fa-external-link-alt"></i> 新しいタブで開く'
+        };
+
+        langButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                langButtons.forEach(btn => btn.classList.remove('active'));
+                resumeIframes.forEach(iframe => iframe.classList.remove('active'));
+
+                button.classList.add('active');
+                const lang = button.dataset.lang;
+
+                const activeIframe = document.getElementById(`resume-${lang}`);
+                activeIframe.classList.add('active');
+
+                // Update PDF download button
+                pdfDownloadButton.href = `./resume_${lang}.pdf`;
+                pdfDownloadButton.download = `resume_${lang}.pdf`;
+                pdfDownloadButton.innerHTML = downloadIcons[lang];
+
+                // Update "Open in New Tab" button
+                openNewTabButton.href = activeIframe.src; // Set href to the iframe's src
+                openNewTabButton.innerHTML = openNewTabTexts[lang]; // Update text/icon
+            });
+        });
+
+        // Initial setup for Chinese
+        const initialLang = 'zh'; // Set initial language to Chinese
+        pdfDownloadButton.href = `./resume_${initialLang}.pdf`;
+        pdfDownloadButton.download = `resume_${initialLang}.pdf`;
+        pdfDownloadButton.innerHTML = downloadIcons[initialLang];
+
+        // Initial setup for "Open in New Tab" button
+        openNewTabButton.href = document.getElementById(`resume-${initialLang}`).src;
+        openNewTabButton.innerHTML = openNewTabTexts[initialLang];
+        openNewTabButton.target = "_blank"; // Ensure it opens in a new tab
+    </script>
+</body>
+</html>

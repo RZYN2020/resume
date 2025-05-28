@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="resume-container">
+        <div class="resume-content">
+            <div class="profile-photo-container">
+                <img src="./photo.jpg" alt="Profile Photo" class="profile-photo">
+            </div>
+            <h1>🧑‍💻赵勇臻</h1>
+<p>（+86）181-6810-0075｜ <a href="mailto:zhaoyzzz@outlook.com">zhaoyzzz@outlook.com</a></p>
+<p>出生年月：2002.3.22 | 籍贯：甘肃庆阳</p>
+<h2>教育背景</h2>
+<p><strong>南京大学 - 硕士 - 软件工程专业（2024.09-2026.07）（推免）</strong></p>
+<p><strong>南京大学 - 本科 - 软件工程专业（2020.09-2024.07）</strong></p>
+<h2>专业技能</h2>
+<ul>
+<li><strong>基础知识</strong>：熟悉计算机网络、操作系统和编译原理等方面基础知识。</li>
+<li><strong>编程语言</strong>：熟悉 <strong>Java</strong>， <strong>Python</strong> 以及 <strong>C++</strong>。</li>
+<li><strong>后端框架</strong>：熟悉 <strong>SpringBoot</strong>。也能快速上手其他 Web 框架。</li>
+<li><strong>技术分享</strong>：在博客 https://rzyn2020.github.io/ 中进行一些技术分享。</li>
+<li><strong>语言能力</strong>：英语（CET6），能熟练阅读英文文档和书籍，观看英文技术视频。</li>
+</ul>
+<h2>实习经历</h2>
+<p><strong>腾讯 - CSIG - TRTC - 音视频 sdk（2025.06 - ）</strong></p>
+<p>腾讯实时音视频（Tencent Real-Time Communication，简称 TRTC） 是腾讯云提供的一款核心的实时音视频通信 PaaS 产品。我主要负责音视频 sdk 开发。</p>
+<p><strong>网易 - 伏羲 - 后端系统开发 -（2023.06 - 2023.09）</strong></p>
+<p>AOP（Agent-Oriented-Programming，面向智能体编程）是网易伏羲设计的一套全新的编程范式，用户可以通过该框架调用智能体服务。我主要负责项目自用序列化框架 DDL 模块的开发，并采用<strong>测试驱动开发（TDD）</strong>和<strong>类型驱动开发</strong>等技术，确保了代码的高质量和可维护性。主要工作如下：</p>
+<ul>
+<li><strong>功能开发：</strong>扩展 DDL 模块的功能，新增对多种复杂数据类型的支持同时，为项目引入 type hints， 结合 <strong>mypy</strong> 进行静态类型检查，有效提升了代码的可读性、可维护性和类型安全性，减少了运行时错误的发生概率。</li>
+<li><strong>性能分析：</strong>开发性能分析脚本，利用火焰图进行性能分析，定位了关键性能瓶颈。</li>
+<li><strong>完善测试：</strong>基于 <strong>Property-Based Random Testing</strong> 思想<strong>，</strong>完善了 DDL 模块的测试，将覆盖率提升至 <strong>90%</strong>。</li>
+<li><strong>性能优化：</strong> 采用了多种优化方法提升了 DDL 的性能。在优化之前 DDL 序列化平均耗时在 protobuf 的<strong>50倍</strong>左右，优化后在大部分典型场景下性能与原生 protobuf 相差在<strong>2倍</strong>以内，部分场景为 protobuf 的<strong>四分之一</strong>不到。</li>
+</ul>
+<h2>项目经历</h2>
+<p><strong>求是社区 -（2025.04 - 2025.07）</strong></p>
+<p>实现了一个面向哲学与社会学爱好者的前后端分离社区平台，引入 <strong>AI 虚拟哲学家</strong>参与深度讨论。我负责项目的技术选型与整体框架搭建，并采用 <strong>ADD (Architecture Driven Design)</strong> 和 <strong>DDD (Domain-Driven Design)</strong> 方法进行架构设计与功能实现。</p>
+<p><strong>技术栈</strong>：Spring Boot、MyBatis-Plus、MySQL、Redis、MongoDB、Elasticsearch、RabbitMQ、Docker</p>
+<p><strong>核心技术</strong>：</p>
+<ul>
+<li>利用 <strong>RabbitMQ</strong> 将用户评论、点赞、收藏及系统消息进行异步解耦，有效提升系统并发处理能力。</li>
+<li>通过 <strong>Redis ZSET</strong> 实现了<strong>用户活跃度实时排行</strong>，并采用先写 MySQL，再删除 Redis 缓存的策略，在高并发场景下有效保证了<strong>缓存一致性</strong>。</li>
+<li>为满足社区在高并发场景下业务 ID 的唯一性与可追溯性，设计并实现了一套基于<strong>雪花算法</strong>的<strong>分布式 ID 生成方案</strong>，显著<strong>降低了 ID 生成延迟</strong>。</li>
+<li>结合 <strong>RAG</strong> 和 <strong>Agent</strong> 技术，引入了 <strong>AI 虚拟哲学家</strong>，使其能理解并参与用户的哲学讨论，极大丰富了社区互动体验。</li>
+</ul>
+<p><strong>Transformer-LLM -（2025.03 - 2025.04）</strong></p>
+<ul>
+<li>实现了一个基于 <strong>Transformer</strong> 架构的<strong>大语言模型</strong>，并在此基础上进行性能优化以及微调，对齐工作。</li>
+<li>深入研究并实践了 LLM 的性能剖析（<strong>Profiling</strong>） 以及<strong>性能优化</strong>技术。</li>
+<li>通过该项目，掌握了 LLM 从模型设计、训练、优化到部署的<strong>端到端流程和关键技术</strong>。</li>
+</ul>
+<p><strong>SysY-RISCV 编译器 -（2024.07 - 2024.09）</strong></p>
+<ul>
+<li>使用 <strong>C++17</strong> 完成了一个<strong>高性能编译器</strong>，其生成的代码性能表现达到 <strong>GCC O2 水准</strong>。</li>
+<li>基于 <strong>SSA IR</strong> 实现了多种<strong>编译器优化技术</strong>，如<strong>死代码消除</strong>、<strong>常量折叠</strong>、<strong>循环优化</strong>，寄<strong>存器分配</strong>，显著提升了目标代码执行效率。</li>
+<li>负责编译器后端开发并担任<strong>组长</strong>，锻炼了团队协作和领导能力，加深了对编程语言的认识。</li>
+</ul>
+<p><strong>miniOS 操作系统 -（2022.03 - 2022.06）</strong></p>
+<ul>
+<li>使用<strong>C语言</strong>实现了一个<strong>支持多处理器的操作系统</strong>。</li>
+<li>在实现<strong>内存分配器</strong>的过程中，分别实现了基于<strong>链表</strong>的，基于<strong>红黑树</strong>的，和基于 <strong>slab</strong> 的内存分配器，深刻理解了不同内存管理策略的性能权衡，并将其融入到“<strong>Fast Path，Slow Path</strong>”相结合的系统设计原则中。</li>
+<li>在实现内核多线程的过程中，深入理解了<strong>并发编程的基本理论</strong>，认识到在并发编程中“<strong>防御式编程</strong>”的重要性。</li>
+</ul>
+        </div>
+    </div>
+</body>
+</html>

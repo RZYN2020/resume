@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="resume-container">
+        <div class="resume-content">
+            <div class="profile-photo-container">
+                <img src="./photo.jpg" alt="Profile Photo" class="profile-photo">
+            </div>
+            <h1>🧑‍💻Yongzhen Zhao</h1>
+<p>(+86) 181-6810-0075 | <a href="mailto:zhaoyzzz@outlook.com">zhaoyzzz@outlook.com</a></p>
+<p>Date of Birth: March 22, 2002 | Place of Origin: Qingyang, Gansu, China</p>
+<h2>Education</h2>
+<p><strong>Nanjing University - Master of Engineering - Software Engineering (2024.09-2026.07) (Recommended Admission)</strong></p>
+<p><strong>Nanjing University - Bachelor of Engineering - Software Engineering (2020.09-2024.07)</strong></p>
+<h2>Skills</h2>
+<ul>
+<li><strong>Fundamentals</strong>: Proficient in foundational knowledge of computer networks, operating systems, and compiler principles.</li>
+<li><strong>Programming Languages</strong>: Proficient in <strong>Java</strong>, <strong>Python</strong>, and <strong>C++</strong>.</li>
+<li><strong>Backend Frameworks</strong>: Familiar with <strong>SpringBoot</strong> and capable of quickly learning other Web frameworks.</li>
+<li><strong>Technical Sharing</strong>: Shares technical insights on my blog at <a href="https://rzyn2020.github.io/">https://rzyn2020.github.io/</a>.</li>
+<li><strong>Language Proficiency</strong>: English (CET-6), capable of proficiently reading English documentation and books, and watching English technical videos.</li>
+</ul>
+<h2>Internship Experience</h2>
+<p><strong>Tencent - CSIG - TRTC - Audio/Video SDK (2025.06 - Present)</strong></p>
+<p>Tencent Real-Time Communication (TRTC) is a core real-time audio/video communication PaaS product provided by Tencent Cloud. I am primarily responsible for audio/video SDK development.</p>
+<p><strong>NetEase - Fuxi - Backend System Development (2023.06 - 2023.09)</strong></p>
+<p>AOP (Agent-Oriented Programming) is a new programming paradigm designed by NetEase Fuxi, allowing users to invoke agent services through this framework. I was primarily responsible for developing the DDL module of the project's internal serialization framework. I adopted <strong>Test-Driven Development (TDD)</strong> and <strong>Type-Driven Development</strong> to ensure high code quality and maintainability. My main responsibilities included:</p>
+<ul>
+<li><strong>Feature Development</strong>: Extended the DDL module's functionality to support various complex data types. Additionally, introduced type hints to the project and integrated <strong>mypy</strong> for static type checking, effectively improving code readability, maintainability, and type safety, while reducing runtime errors.</li>
+<li><strong>Performance Analysis</strong>: Developed performance analysis scripts and utilized <strong>flame graphs</strong> to pinpoint key performance bottlenecks.</li>
+<li><strong>Test Enhancement</strong>: Improved testing for the DDL module based on <strong>Property-Based Random Testing</strong> principles, increasing test coverage to <strong>90%</strong>.</li>
+<li><strong>Performance Optimization</strong>: Employed various optimization methods to enhance DDL's performance. Prior to optimization, DDL serialization averaged <strong>50 times slower</strong> than protobuf; after optimization, performance was within <strong>2 times</strong> of native protobuf in most typical scenarios, and less than <strong>one-quarter</strong> in some specific scenarios.</li>
+</ul>
+<h2>Projects</h2>
+<p><strong>Qiushi Community (2025.04 - 2025.07)</strong></p>
+<p>Developed a full-stack, decoupled community platform for philosophy and sociology enthusiasts, integrating <strong>AI virtual philosophers</strong> for in-depth discussions. I was responsible for technology selection and overall framework design, applying <strong>ADD (Architecture Driven Design)</strong> and <strong>DDD (Domain-Driven Design)</strong> methodologies for architectural design and feature implementation.</p>
+<p><strong>Tech Stack</strong>: Spring Boot, MyBatis-Plus, MySQL, Redis, MongoDB, Elasticsearch, RabbitMQ, Docker</p>
+<p><strong>Core Technologies</strong>:</p>
+<ul>
+<li>Utilized <strong>RabbitMQ</strong> to asynchronously decouple user comments, likes, collections, and system messages, significantly enhancing system <strong>concurrent processing capability</strong>.</li>
+<li>Implemented <strong>real-time user activity ranking</strong> using <strong>Redis ZSET</strong>, employing a "write to MySQL first, then delete Redis cache" strategy to effectively ensure <strong>cache consistency</strong> in high-concurrency scenarios.</li>
+<li>Designed and implemented a <strong>distributed ID generation scheme</strong> based on the <strong>Snowflake algorithm</strong> to ensure business ID uniqueness and traceability in high-concurrency scenarios, significantly <strong>reducing ID generation latency</strong>.</li>
+<li>Integrated <strong>RAG</strong> and <strong>Agent</strong> technologies to introduce <strong>AI virtual philosophers</strong>, enabling them to understand and participate in user philosophical discussions, greatly enriching the community interaction experience.</li>
+</ul>
+<p><strong>Transformer-LLM (2025.03 - 2025.04)</strong></p>
+<ul>
+<li>Implemented a <strong>Large Language Model</strong> based on the <strong>Transformer architecture</strong>, followed by performance optimization, fine-tuning, and alignment.</li>
+<li>Conducted in-depth research and practiced LLM <strong>profiling</strong> and <strong>performance optimization techniques</strong>.</li>
+<li>Through this project, gained a comprehensive understanding of the <strong>end-to-end process and key technologies</strong> for LLM from model design, training, optimization, to deployment.</li>
+</ul>
+<p><strong>SysY-RISCV Compiler (2024.07 - 2024.09)</strong></p>
+<ul>
+<li>Developed a <strong>high-performance compiler</strong> using <strong>C++17</strong>, with generated code performance reaching <strong>GCC O2</strong> levels.</li>
+<li>Implemented various <strong>compiler optimization techniques</strong> based on <strong>SSA IR</strong>, including <strong>dead code elimination, constant folding, loop optimization, and register allocation</strong>, significantly improving target code execution efficiency.</li>
+<li>Responsible for backend compiler development and served as <strong>team leader</strong>, enhancing teamwork and leadership skills, and deepening understanding of programming languages.</li>
+</ul>
+<p><strong>miniOS Operating System (2022.03 - 2022.06)</strong></p>
+<ul>
+<li>Implemented a <strong>multi-processor supported operating system</strong> using <strong>C language</strong>.</li>
+<li>Developed <strong>memory allocators</strong> based on <strong>linked lists, red-black trees, and slab allocation</strong>, gaining a profound understanding of the performance trade-offs of different memory management strategies and integrating them into the "<strong>Fast Path, Slow Path</strong>" system design principle.</li>
+<li>Gained a deep understanding of <strong>fundamental concurrency theories</strong> and recognized the importance of <strong>"defensive programming"</strong> in concurrent programming during kernel multithreading implementation.</li>
+</ul>
+        </div>
+    </div>
+</body>
+</html>

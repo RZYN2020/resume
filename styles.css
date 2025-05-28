@@ -1,354 +1,262 @@
-/* 页面设置 */
-@page {
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+KR:wght@400;700&family=Noto+Sans:wght@400;700&display=swap');
 
-  size: A4;
-
-  margin: 0;
-
-}
-
-
-
-/* 打印和PDF导出优化 */
-
-@media print {
-
-  body {
-
-    width: 210mm;
-
-    height: 297mm;
-
-    margin: 0 auto;
-
-    background: white;
-
-  }
-
-  .resume-container {
-
-    width: 100%;
-
-    height: 100%;
-
-    margin: 0;
-
-    padding: 0;
-
-    box-shadow: none;
-
-    border: none;
-
-  }
-
-  .resume-content {
-
-    width: 85%;
-
-    max-width: 1000px;
-
-    margin: 0 auto;
-
-    padding: 20mm;
-
-  }
-
-  /* 隐藏不必要的元素 */
-
-  * {
-
-    -webkit-print-color-adjust: exact !important;
-
-    color-adjust: exact !important;
-
-  }
-
-  .print-button {
-    display: none !important;
-  }
-
-}
-
-
-
-/* 简历容器 */
-
-.resume-container {
-
-  width: 1123px;
-
-  height: 1611px;
-
-  margin: 0 auto;
-
-  background-color: #fff;
-
-  border: none;
-
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-
-  overflow: hidden;
-
-  position: relative;
-
-}
-
-
-
-/* 简历内容 */
-
-.resume-content {
-
-  width: 85%;
-
-  max-width: 1000px;
-
-  margin: 0 auto;
-
-  padding: 40px;
-
-}
-
-
-
-/* 媒体查询 */
-
-@media screen and (max-width: 1123px) {
-
-  .resume-container {
-
-    width: 100%;
-
-    height: auto;
-
-    overflow-y: scroll;
-
-  }
-
-}
-
-
-
-/* 基础重置 */
-
-body, h1, h2, p {
-
-    margin: 0;
-
-    padding: 0;
-
-}
-
-
-
-/* 字体和颜色 */
 
 body {
-
-    font-family: "SF Pro SC", "PingFang SC", "Microsoft YaHei", sans-serif;
-
-    color: #2c3e50;
-
-    background-color: #f5f5f5;
-
-    line-height: 1.8;
-
+    font-family: 'Noto Sans SC', 'Noto Sans JP', 'Noto Sans KR', 'Noto Sans', sans-serif;
+    line-height: 1.5; /* 更紧凑的行高 */
+    color: #333;
+    background-color: #F0F8FF; /* 更浅的背景蓝色 (AliceBlue) */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 
-
-
-/* 联系信息 */
-
-.contact-info {
-
-    text-align: center;
-
-    margin-bottom: 30px;
-
-    color: #666;
-
-    font-size: 16px;
-
+.resume-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 850px; /* Optimal width for A4-like print */
+    margin: 25px auto; /* 略微减少外边距 */
+    padding: 30px 40px; /* 略微减少内边距 */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* 更柔和的阴影 */
+    border-radius: 10px; /* 略微减少圆角 */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    box-sizing: border-box;
 }
 
-
-
-/* 教育背景 */
-
-.education {
-
-    margin-bottom: 30px;
-
-    padding: 15px;
-
-    background: rgba(0, 51, 102, 0.03);
-
-    border-radius: 8px;
-
+/* Clearfix for resume-content to contain floated elements */
+.resume-content::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
-/* 实习经历和项目经验 */
-
-.experience, .projects {
-
-    margin-bottom: 30px;
-
-    padding: 20px 0;
-
+/* Profile Photo */
+.profile-photo-container {
+    float: right; /* 照片浮动到右侧 */
+    margin-left: 25px; /* 照片与左侧文本的间距 */
+    margin-top: 0; /* 调整照片与姓名行的垂直对齐 */
+    margin-bottom: 20px; /* 照片下方间距 */
 }
 
-/* 标题 */
+.profile-photo {
+    width: 120px; /* 照片尺寸 */
+    height: 120px;
+    border-radius: 50%; /* 圆形照片 */
+    object-fit: cover; /* 确保图片覆盖整个区域 */
+    border: 3px solid #3498DB; /* 浅蓝色边框 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 照片阴影 */
+}
 
-h1, h2 {
-
-    color: #1a365d;
-
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noto Sans SC', 'Noto Sans JP', 'Noto Sans KR', 'Noto Sans', sans-serif;
+    color: #2C5F7F; /* 浅一些的深蓝色 */
+    margin-top: 1.2em; /* 略微减少顶部间距 */
+    margin-bottom: 0.4em; /* 略微减少底部间距 */
     font-weight: 600;
-
+    border-bottom: 1px solid rgba(44, 95, 127, 0.1); /* 更细、更浅的下划线 */
+    padding-bottom: 4px; /* 略微减少内边距 */
 }
 
 h1 {
-
-    font-size: 32px;
-
-    margin-bottom: 15px;
-
-    text-align: center;
-
+    font-size: 2.3em; /* 略微缩小主标题 */
+    text-align: left; /* 主标题左对齐 */
+    color: #1A435A; /* 更深的浅蓝色，突出主标题 */
+    margin-bottom: 0.6em; /* 略微减少底部间距 */
+    border-bottom: none;
+    padding-bottom: 0;
+    font-weight: 700;
+    margin-right: 160px; /* 为浮动照片留出空间 (照片宽度120px + margin-left 25px + 额外空间) */
 }
 
 h2 {
-
-    font-size: 22px;
-
-    border-bottom: 2px solid #1a365d;
-
-    padding-bottom: 8px;
-
-    margin-bottom: 15px;
-
-    position: relative;
-
+    font-size: 1.4em; /* 进一步缩小二级标题 */
+    margin-top: 1.8em; /* 略微减少顶部间距 */
+    padding-left: 8px; /* 略微减少内边距 */
+    border-left: 4px solid #3498DB; /* 浅蓝色强调线 */
 }
 
-h2::after {
-
-    content: '';
-
-    position: absolute;
-
-    bottom: -2px;
-
-    left: 0;
-
-    width: 50px;
-
-    height: 2px;
-
-    background-color: #3182ce;
-
-}
-
-/* 列表 */
-
-ul {
-
-    list-style-type: none;
-
-    margin-left: 0;
-
-    padding-left: 20px;
-
-}
-
-ul li {
-
-    margin-bottom: 8px;
-
-    padding-left: 15px;
-
-    position: relative;
-
-    line-height: 1.6;
-
-}
-
-ul li:before {
-
-    content: "▪";
-
-    position: absolute;
-
-    left: -5px;
-
-    color: #3182ce;
-
-}
-
-/* 链接 */
-
+/* Links */
 a {
-
-    color: #3182ce;
-
+    color: #3498DB; /* 更浅的标准蓝色 */
     text-decoration: none;
-
-    transition: color 0.2s ease;
-
+    transition: color 0.3s ease;
 }
 
 a:hover {
-
-    color: #2c5282;
-
-    text-decoration: none;
-
+    color: #217DBB; /* 鼠标悬停时略微加深 */
+    text-decoration: underline;
 }
 
-/* 其他 */
-
-.other {
-
-    margin-top: 30px;
-
-    padding-top: 20px;
-
-    border-top: 1px solid #e2e8f0;
-
+/* Lists */
+ul {
+    list-style: none; /* Remove default bullet */
+    padding-left: 0;
 }
 
-/* 其他样式 */
-
-.dark-theme {
-
-    color: #e2e8f0;
-
-    background-color: #1a202c;
-
+ul li {
+    position: relative;
+    padding-left: 20px; /* 略微减少左侧内边距 */
+    margin-bottom: 5px; /* 更紧凑的列表项间距 */
 }
 
-.compact-theme {
-
-    font-size: 14px;
-
+ul li::before {
+    content: '•'; /* Custom bullet point */
+    color: #3498DB; /* 浅蓝色项目符号 */
+    position: absolute;
+    left: 0;
+    font-size: 1.1em; /* 略微缩小项目符号 */
+    line-height: 1.5; /* 与行高保持一致 */
 }
 
-/* 打印按钮样式 */
-.print-button {
-    display: block;
-    width: 200px;
-    margin: 20px auto;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    text-align: center;
-    transition: background-color 0.3s ease;
+/* Nested Lists */
+ul ul {
+    margin-left: 25px; /* 嵌套列表缩进 */
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
-.print-button:hover {
-    background-color: #45a049;
+ul ul li::before {
+    content: '—'; /* 嵌套列表使用不同的项目符号 */
+    color: #5DADE2; /* 嵌套列表项目符号使用略不同的蓝色 */
+}
+
+/* Strong/Bold text */
+strong {
+    color: #2C5F7F; /* 强调文本使用浅一些的深蓝色 */
+    font-weight: 600;
+}
+
+/* Paragraphs */
+p {
+    margin-bottom: 0.8em; /* 更紧凑的段落间距 */
+    color: #444;
+}
+
+/* Specific sections */
+.contact-info {
+    text-align: left; /* 联系信息左对齐 */
+    margin-bottom: 1.5em; /* 略微减少底部间距 */
+    font-size: 1em; /* 略微缩小字体 */
+    color: #555;
+    margin-right: 160px; /* 为浮动照片留出空间 */
+}
+
+.contact-info span {
+    margin: 0 8px; /* 略微减少间距 */
+}
+
+.contact-info a {
+    font-weight: 500;
+}
+
+/* Experience/Project details */
+.experience-item, .project-item {
+    margin-bottom: 1.5em; /* 更紧凑的条目间距 */
+    padding-left: 12px; /* 略微减少内边距 */
+    border-left: 2px solid rgba(52, 152, 219, 0.2); /* 更细、更浅的蓝色边框 */
+}
+
+.experience-item h3, .project-item h3 {
+    margin-top: 0;
+    margin-bottom: 0.2em;
+    font-size: 1.2em; /* 略微缩小标题 */
+    color: #217DBB; /* 浅蓝色用于标题 */
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.experience-item p.duration, .project-item p.duration {
+    font-style: italic;
+    color: #666;
+    margin-top: 0;
+    margin-bottom: 0.4em; /* 更紧凑的间距 */
+    font-size: 0.9em; /* 略微缩小字体 */
+}
+
+.experience-item ul, .project-item ul {
+    margin-top: 0.4em; /* 更紧凑的间距 */
+}
+
+/* Code blocks (if any in markdown) */
+pre {
+    background-color: #EBF5FF; /* 更浅的蓝色背景 */
+    border: 1px solid #C5D9EE; /* 更浅的蓝色边框 */
+    border-radius: 6px; /* 略微减少圆角 */
+    padding: 12px; /* 略微减少内边距 */
+    overflow-x: auto;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+    font-size: 0.85em; /* 略微缩小字体 */
+    color: #1A435A; /* 浅一些的深蓝色 */
+}
+
+code {
+    background-color: #EBF5FF;
+    padding: 1px 4px; /* 略微减少内边距 */
+    border-radius: 3px; /* 略微减少圆角 */
+    color: #1A435A;
+}
+
+/* Print specific styles */
+@media print {
+    body {
+        background-color: #ffffff;
+        margin: 0;
+        padding: 0;
+        -webkit-print-color-adjust: exact; /* Ensures background colors are printed */
+        print-color-adjust: exact;
+    }
+
+    .resume-container {
+        width: 100%;
+        margin: 0;
+        padding: 20mm 15mm; /* A4 margins for printing */
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    h1 {
+        font-size: 2.0em; /* 打印时主标题更小 */
+        margin-right: 140px; /* 打印时为照片留出的空间 */
+    }
+
+    h2 {
+        font-size: 1.3em; /* 打印时二级标题更小 */
+    }
+
+    /* Adjust line heights and margins for better print layout */
+    p, ul li {
+        font-size: 0.85em; /* 打印时字体更小 */
+        line-height: 1.25; /* 打印时行高更紧凑 */
+    }
+
+    .experience-item, .project-item {
+        margin-bottom: 0.8em; /* 打印时条目间距更小 */
+    }
+
+    /* Ensure links are readable */
+    a {
+        color: #217DBB !important; /* Force blue for links */
+        text-decoration: underline !important;
+    }
+
+    /* Hide photo in print if desired, or adjust its size */
+    .profile-photo-container {
+        margin-bottom: 10px; /* 打印时照片下方间距 */
+        margin-left: 20px; /* 打印时照片与文本间距 */
+    }
+    .profile-photo {
+        width: 90px; /* 打印时照片尺寸 */
+        height: 90px;
+        border: 2px solid #3498DB; /* 打印时边框 */
+    }
+
+    .contact-info {
+        margin-right: 140px; /* 打印时为浮动照片留出空间 */
+    }
 }

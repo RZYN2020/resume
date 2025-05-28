@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="resume-container">
+        <div class="resume-content">
+            <div class="profile-photo-container">
+                <img src="./photo.jpg" alt="Profile Photo" class="profile-photo">
+            </div>
+            <h1>🧑‍💻趙勇臻</h1>
+<p>(+86) 181-6810-0075｜ <a href="mailto:zhaoyzzz@outlook.com">zhaoyzzz@outlook.com</a></p>
+<p>生年月日：2002年3月22日 | 出身地：中国甘粛省慶陽市</p>
+<h2>学歴</h2>
+<p><strong>南京大学 - 修士 - ソフトウェア工学専攻（2024年9月 - 2026年7月）（推薦入学）</strong></p>
+<p><strong>南京大学 - 学士 - ソフトウェア工学専攻（2020年9月 - 2024年7月）</strong></p>
+<h2>専門スキル</h2>
+<ul>
+<li><strong>基礎知識</strong>：コンピューターネットワーク、オペレーティングシステム、コンパイラ原理などの基礎知識に精通。</li>
+<li><strong>プログラミング言語</strong>：<strong>Java</strong>、<strong>Python</strong>、<strong>C++</strong>に精通。</li>
+<li><strong>バックエンドフレームワーク</strong>：<strong>SpringBoot</strong>に精通。その他のWebフレームワークも迅速に習得可能。</li>
+<li><strong>技術共有</strong>：ブログ <a href="https://rzyn2020.github.io/">https://rzyn2020.github.io/</a> にて技術情報を共有。</li>
+<li><strong>語学力</strong>：英語（CET6）。英語のドキュメントや書籍を熟読し、英語の技術動画を視聴可能。</li>
+</ul>
+<h2>インターンシップ経験</h2>
+<p><strong>テンセント (Tencent) - CSIG - TRTC - 音声・動画SDK（2025年6月 - 現在）</strong></p>
+<p>テンセントリアルタイムコミュニケーション（Tencent Real-Time Communication、略称TRTC）は、テンセントクラウドが提供する中核的なリアルタイム音声・動画通信PaaS製品です。私は主に音声・動画SDKの開発を担当しています。</p>
+<p><strong>ネットイース (NetEase) - 伏羲 (Fuxi) - バックエンドシステム開発（2023年6月 - 2023年9月）</strong></p>
+<p>AOP（Agent-Oriented-Programming、エージェント指向プログラミング）は、ネットイース伏羲が設計した全く新しいプログラミングパラダイムであり、ユーザーはこのフレームワークを通じてエージェントサービスを呼び出すことができます。私は主にプロジェクト内で使用されるシリアライゼーションフレームワークDDLモジュールの開発を担当し、<strong>テスト駆動開発（TDD）</strong>や<strong>型駆動開発</strong>などの技術を採用して、コードの高品質と保守性を確保しました。主な業務内容は以下の通りです。</p>
+<ul>
+<li><strong>機能開発</strong>：DDLモジュールの機能を拡張し、様々な複雑なデータ型への対応を追加しました。同時に、プロジェクトに型ヒントを導入し、<strong>mypy</strong>と連携して静的型チェックを行うことで、コードの可読性、保守性、型安全性を効果的に向上させ、実行時エラーの発生確率を低減しました。</li>
+<li><strong>性能分析</strong>：性能分析スクリプトを開発し、<strong>フレームグラフ</strong>を利用して性能分析を行い、主要な性能ボトルネックを特定しました。</li>
+<li><strong>テスト改善</strong>：<strong>Property-Based Random Testing</strong>の思想に基づき、DDLモジュールのテストを改善し、カバレッジを<strong>90%</strong>に向上させました。</li>
+<li><strong>性能最適化</strong>：様々な最適化手法を採用してDDLの性能を向上させました。最適化前はDDLのシリアライゼーションの平均処理時間はprotobufの約50倍でしたが、最適化後はほとんどの典型的なシナリオでネイティブprotobufと2倍以内の差となり、一部のシナリオではprotobufの4分の1以下となりました。</li>
+</ul>
+<h2>プロジェクト経験</h2>
+<p><strong>求是コミュニティ（2025年4月 - 2025年7月）</strong></p>
+<p>哲学・社会学愛好家向けのフロントエンド・バックエンド分離型コミュニティプラットフォームを実装し、深層議論に参加する<strong>AIバーチャル哲学者</strong>を導入しました。私はプロジェクトの技術選定と全体フレームワークの構築を担当し、<strong>ADD (Architecture Driven Design)</strong> と <strong>DDD (Domain-Driven Design)</strong> 手法を用いてアーキテクチャ設計と機能実装を行いました。</p>
+<p><strong>技術スタック</strong>：Spring Boot、MyBatis-Plus、MySQL、Redis、MongoDB、Elasticsearch、RabbitMQ、Docker</p>
+<p><strong>コア技術</strong>：</p>
+<ul>
+<li><strong>RabbitMQ</strong>を活用してユーザーコメント、いいね、お気に入り、システムメッセージを非同期的に分離し、システムの<strong>並行処理能力</strong>を効果的に向上させました。</li>
+<li><strong>Redis ZSET</strong>を通じて<strong>ユーザーアクティビティのリアルタイムランキング</strong>を実装し、「MySQLにまず書き込み、その後Redisキャッシュを削除する」戦略を採用することで、高並行シナリオにおける<strong>キャッシュの一貫性</strong>を効果的に保証しました。</li>
+<li>コミュニティの高並行シナリオにおけるビジネスIDの一意性と追跡可能性を満たすため、<strong>Snowflakeアルゴリズム</strong>に基づいた<strong>分散ID生成スキーム</strong>を設計・実装し、ID生成の遅延を大幅に削減しました。</li>
+<li><strong>RAG</strong>と<strong>Agent</strong>技術を組み合わせ、<strong>AIバーチャル哲学者</strong>を導入しました。これにより、AIがユーザーの哲学的な議論を理解し参加できるようになり、コミュニティのインタラクション体験が大幅に豊かになりました。</li>
+</ul>
+<p><strong>Transformer-LLM（2024年3月 - 2025年4月）</strong></p>
+<ul>
+<li><strong>Transformerアーキテクチャ</strong>に基づいた<strong>大規模言語モデル</strong>を実装し、その上で性能最適化、ファインチューニング、アライメント作業を行いました。</li>
+<li>LLMの<strong>プロファイリング</strong>と<strong>性能最適化技術</strong>について深く研究し、実践しました。</li>
+<li>このプロジェクトを通じて、モデル設計、トレーニング、最適化からデプロイメントまでのLLMの<strong>エンドツーエンドのプロセスと主要技術</strong>を習得しました。</li>
+</ul>
+<p><strong>SysY-RISCV コンパイラ（2024年7月 - 2024年9月）</strong></p>
+<ul>
+<li><strong>C++17</strong>を使用して<strong>高性能コンパイラ</strong>を完成させ、生成されたコードの性能は<strong>GCC O2レベル</strong>に達しました。</li>
+<li><strong>SSA IR</strong>に基づき、<strong>デッドコード削除、定数畳み込み、ループ最適化、レジスタ割り当て</strong>など、様々な<strong>コンパイラ最適化技術</strong>を実装し、ターゲットコードの実行効率を大幅に向上させました。</li>
+<li>コンパイラのバックエンド開発を担当し、<strong>チームリーダー</strong>を務め、チームワークとリーダーシップ能力を養い、プログラミング言語への理解を深めました。</li>
+</ul>
+<p><strong>miniOS オペレーティングシステム（2022年3月 - 2022年6月）</strong></p>
+<ul>
+<li><strong>C言語</strong>を使用して<strong>マルチプロセッサ対応のオペレーティングシステム</strong>を実装しました。</li>
+<li>メモリ管理の実装過程で、<strong>リンクリスト、赤黒木、スラブ</strong>に基づいたメモリ管理をそれぞれ実装し、異なるメモリ管理戦略の性能トレードオフを深く理解し、「Fast Path, Slow Path」を組み合わせたシステム設計原則に組み込みました。</li>
+<li>カーネルマルチスレッドの実装過程で、<strong>並行プログラミングの基本的な理論</strong>を深く理解し、並行プログラミングにおける<strong>「防御的プログラミング」</strong>の重要性を認識しました。</li>
+</ul>
+        </div>
+    </div>
+</body>
+</html>
