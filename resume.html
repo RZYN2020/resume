@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="resume-container">
+        <div class="resume-content">
+            <div class="profile-photo-container">
+                <img src="./photo.jpg" alt="Profile Photo" class="profile-photo">
+            </div>
+            <h1>🧑‍💻赵勇臻</h1>
+<p>联系方式：（+86）181-6810-0075｜邮箱： <a href="mailto:zhaoyzzz@outlook.com">zhaoyzzz@outlook.com</a> </p>
+<p>技术博客：<a href="https://rzyn2020.github.io/">rzyn2020.github.io</a></p>
+<p>出生年月：2002.3.22 | 籍贯：甘肃庆阳</p>
+<h2>教育背景</h2>
+<p><strong>南京大学 - 硕士 - 软件工程专业（2024.09-2026.06）（推免）</strong></p>
+<p><strong>南京大学 - 本科 - 软件工程专业（2020.09-2024.06）</strong></p>
+<h2>专业技能</h2>
+<ul>
+<li><strong>编程语言</strong>: 熟练掌握 Java, Python, C++，具备良好的编码规范。</li>
+<li><strong>后端技术</strong>: 熟练掌握 SpringBoot 框架，深入理解其核心原理；具备快速学习并应用其他 Web 框架的能力。</li>
+<li><strong>基础知识</strong>: 扎实掌握计算机网络、操作系统、编译原理、数据结构与算法等计算机核心基础。</li>
+<li><strong>开发工具</strong>: 熟练使用 Git, Docker, RabbitMQ, Redis, MySQL 等常用开发与中间件工具。</li>
+<li><strong>语言能力</strong>: 英语 CET-6，能无障碍阅读英文技术文档、文献及观看技术视频。</li>
+</ul>
+<h2>实习经历</h2>
+<p><strong>腾讯 - CSIG - TRTC - 音视频 sdk（2025.06 - ）</strong></p>
+<ul>
+<li><strong>核心职责</strong>: 负责腾讯实时音视频（TRTC）<strong>回声检测（Echo Detection）</strong> 的算法优化与工程落地，旨在提升复杂声学环境下的通话质量。</li>
+<li><strong>技术优化</strong>: 主导了对 WebRTC 开源方案的改进，并结合业务场景进行参数深度调优与工程化改造。</li>
+<li><strong>量化成果</strong>: 成功实现回声精准识别，<strong>精准率接近 100%，召回率达 80%</strong>，显著改善了用户体验。</li>
+<li><strong>效率提升</strong>: 为加速迭代，独立设计并搭建了一套自动化测试评估框架，支持测试数据自动生成、拼接及量化报告输出，大幅度缩减了算法验证周期。</li>
+</ul>
+<p><strong>网易 - 伏羲 - 后端系统开发 -（2023.06 - 2023.09）</strong></p>
+<ul>
+<li><strong>核心职责</strong>: 负责面向智能体编程（AOP）框架的核心组件——<strong>自研序列化框架 DDL</strong> 的开发与性能优化。</li>
+<li><strong>功能开发</strong>: 扩展 DDL 模块的功能，新增对多种复杂数据类型的支持同时，采用<strong>类型驱动开发</strong>的思想，为项目引入 type hints， 结合 mypy 进行静态类型检查，有效提升了代码的可读性、可维护性和类型安全性，减少了运行时错误的发生概率。</li>
+<li><strong>性能分析</strong>: 开发性能分析脚本，利用火焰图进行性能分析，定位了关键性能瓶颈。</li>
+<li><strong>完善测试</strong>: 采用<strong>测试驱动开发（TDD）</strong> 的思想，基于 <strong>Property-Based Random Testing</strong> 技术，完善了 DDL 模块的测试，将覆盖率提升至 <strong>90%</strong>。</li>
+<li><strong>性能优化</strong>: 采用了多种优化方法提升了 DDL 的性能。在优化之前 DDL 序列化平均耗时在 protobuf 的<strong>50倍</strong>左右，优化后在大部分典型场景下性能与原生 protobuf 相差在<strong>2倍</strong>以内，部分场景为 protobuf 的<strong>四分之一</strong>不到。</li>
+</ul>
+
+<br/>
+<br/>
+<h2>项目经历</h2>
+<p><strong>求是社区 -（2025.04 - 2025.07）</strong></p>
+<p>主导设计并开发了一个面向哲学与社会学爱好者的前后端分离社区平台，创新性地引入 <strong>AI 虚拟哲学家</strong>参与深度讨论。作为技术负责人，采用 <strong>ADD (Architecture Driven Design)</strong> 与 <strong>DDD (Domain-Driven Design)</strong> 的思想指导整体架构设计与实现。</p>
+<p><strong>核心技术</strong>:</p>
+<ul>
+<li>利用 <strong>RabbitMQ</strong> 消息队列将用户评论、点赞等高频操作进行异步解耦，有效提升系统并发处理能力与响应速度。</li>
+<li>搭建 <strong>Redis 集群</strong>与<strong>数据库读写分离</strong>实现服务的高可用与高性能；并利用 <strong>Redis ZSET</strong> 高效实现了<strong>用户活跃度实时排行</strong>功能。</li>
+<li>采用<strong>自适应锁策略</strong>优化缓存架构，针对热点 key 的并发访问进行串行同步，以防止其失效时导致的缓存击穿。</li>
+<li>实施“先写 MySQL，再删除 Redis 缓存”的策略，在高并发场景下有效保证了<strong>缓存与数据库的一致性</strong>。</li>
+<li>结合 <strong>RAG</strong> 技术，引入 <strong>AI 虚拟哲学家</strong>，使其能理解并参与用户的哲学讨论，极大丰富了社区互动体验。</li>
+</ul>
+<p><strong>Transformer-LLM -（2025.03 - 2025.04）</strong></p>
+<ul>
+<li>实现了一个基于 <strong>Transformer</strong> 架构的<strong>大语言模型</strong>，并在此基础上进行性能优化以及微调，对齐工作。</li>
+<li>深入研究并实践了 LLM 的性能剖析（<strong>Profiling</strong>） 以及<strong>性能优化</strong>技术。</li>
+<li>通过该项目，掌握了 LLM 从模型设计、训练、优化到部署的<strong>端到端流程和关键技术</strong>。</li>
+</ul>
+<p><strong>SysY-RISCV 编译器 -（2024.07 - 2024.09）</strong></p>
+<ul>
+<li>使用 <strong>C++17</strong> 完成了一个<strong>高性能编译器</strong>，其生成的代码性能表现达到 <strong>GCC O2 水准</strong>。</li>
+<li>基于 <strong>SSA IR</strong> 实现了多种<strong>编译器优化技术</strong>，如<strong>死代码消除</strong>、<strong>常量折叠</strong>、<strong>循环优化</strong>，寄<strong>存器分配</strong>，显著提升了目标代码执行效率。</li>
+<li>负责编译器后端开发并担任<strong>组长</strong>，锻炼了团队协作和领导能力，加深了对编程语言的认识。</li>
+</ul>
+<p><strong>miniOS 操作系统 -（2022.03 - 2022.06）</strong></p>
+<ul>
+<li>使用<strong>C语言</strong>实现了一个<strong>支持多处理器的操作系统</strong>。</li>
+<li>在实现<strong>内存分配器</strong>的过程中，分别实现了基于<strong>链表</strong>的，基于<strong>红黑树</strong>的，和基于 <strong>slab</strong> 的内存分配器，深刻理解了不同内存管理策略的性能权衡，并将其融入到“<strong>Fast Path，Slow Path</strong>”相结合的系统设计原则中。</li>
+<li>在实现内核多线程的过程中，深入理解了<strong>并发编程的基本理论</strong>，认识到在并发编程中“<strong>防御式编程</strong>”的重要性。</li>
+</ul>
+        </div>
+    </div>
+</body>
+</html>
